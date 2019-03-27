@@ -188,8 +188,10 @@
             <div class="wrapper clearfix">
                 <div class="wrap-box">
                     <ul class="img-list">
+                       
                         <li v-for="it in item.datas">
-                            <a href="#/site/goodsinfo/87" class="">
+                             <router-link :to="'/detail/'+it.artID">
+                            <!-- <a href="#/site/goodsinfo/87" class=""> -->
                                 <div class="img-box">
                                     <img :src="it.img_url">
                                 </div>
@@ -204,9 +206,10 @@
                                         </span>
                                     </p>
                                 </div>
-                            </a>
+                            <!-- </a> -->
+                             </router-link>
                         </li>
-                       
+                      
                     </ul>
                 </div>
             </div>
@@ -241,7 +244,7 @@ export default {
             this.toplist = res.data.message.toplist;
         });
         axios.get("http://111.230.232.110:8899/site/goods/getgoodsgroup").then(res=>{
-            console.log(res)
+            // console.log(res)
             this.goodsList = res.data.message;
         })
     },
