@@ -206,78 +206,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#/site/goodsinfo/88" class="">
-                                <div class="img-box">
-                                    <img src="http://39.108.135.214:8899/upload/201504/20/thumb_201504200059017695.jpg">
-                                </div>
-                                <div class="info">
-                                    <h3>苹果Apple iPhone 6 Plus 16G 4G手机（联通三网版）</h3>
-                                    <p class="price">
-                                        <b>5780</b>元</p>
-                                    <p>
-                                        <strong>库存 198</strong>
-                                        <span>市场价：
-                                            <s>6388</s>
-                                        </span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#/site/goodsinfo/89" class="">
-                                <div class="img-box">
-                                    <img src="http://39.108.135.214:8899/upload/201504/20/thumb_201504200119256512.jpg">
-                                </div>
-                                <div class="info">
-                                    <h3>小米（Mi）小米Note 16G双网通版</h3>
-                                    <p class="price">
-                                        <b>2299</b>元</p>
-                                    <p>
-                                        <strong>库存 59</strong>
-                                        <span>市场价：
-                                            <s>2699</s>
-                                        </span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#/site/goodsinfo/90" class="">
-                                <div class="img-box">
-                                    <img src="http://39.108.135.214:8899/upload/201504/20/thumb_201504200154277661.jpg">
-                                </div>
-                                <div class="info">
-                                    <h3>佳能（Canon） EOS 700D 单反套机</h3>
-                                    <p class="price">
-                                        <b>4799</b>元</p>
-                                    <p>
-                                        <strong>库存 100</strong>
-                                        <span>市场价：
-                                            <s>5099</s>
-                                        </span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#/site/goodsinfo/91" class="">
-                                <div class="img-box">
-                                    <img src="http://39.108.135.214:8899/upload/201504/20/thumb_201504200214471783.jpg">
-                                </div>
-                                <div class="info">
-                                    <h3>尼康(Nikon)D3300套机（18-55mm f/3.5-5.6G VRII）（黑色）</h3>
-                                    <p class="price">
-                                        <b>3180</b>元</p>
-                                    <p>
-                                        <strong>库存 10</strong>
-                                        <span>市场价：
-                                            <s>3150</s>
-                                        </span>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
+                       
                     </ul>
                 </div>
             </div>
@@ -311,7 +240,7 @@ export default {
             this.sliderlist = res.data.message.sliderlist;
             this.toplist = res.data.message.toplist;
         });
-        axios.get("http://111.230.232.110:8899/site/goods/gettopdata/goodssite/goods/getgoodsgroup").then(res=>{
+        axios.get("http://111.230.232.110:8899/site/goods/getgoodsgroup").then(res=>{
             console.log(res)
             this.goodsList = res.data.message;
         })
