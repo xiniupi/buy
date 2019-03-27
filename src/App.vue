@@ -22,12 +22,14 @@
               <a>退出</a>
               <strong>|</strong>
             </span>
-            <a href class>
+           
+              <router-link to="/cart">
               <i class="iconfont icon-cart"></i>购物车(
               <span id="shoppingCartCount">
                 <span>4</span>
               </span>)
-            </a>
+              </router-link>
+         
           </div>
         </div>
       </div>
@@ -38,9 +40,11 @@
           <div id="menu2" class="nav-box menuhd">
             <ul>
               <li class="index">
-                <a href="#" class>
+               
+                  <router-link to="/index">
                   <span class="out" style="top: 0px;">首页</span>
-                </a>
+                  </router-link>
+              
               </li>
               <li class="news">
                 <a href="#" class>
