@@ -1,8 +1,24 @@
 import Vue from 'vue'
 import App from './App.vue'
-import style from '../src/assets/statics/site/css/style.css'
+import '../src/assets/statics/site/css/style.css'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+import index from './components/index.vue'
 Vue.config.productionTip = false
-
+//配置提示
+let routes= [
+  {
+    path:"/",
+    component: index
+  },
+  {
+  path:"/index",
+  component: index
+}]
+let router = new VueRouter({
+    routes
+})
 new Vue({
   render: h => h(App),
+  router
 }).$mount('#app')
