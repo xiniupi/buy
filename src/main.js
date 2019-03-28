@@ -7,6 +7,9 @@ import index from './components/index.vue'
 import cart from './components/cart.vue'
 import detail from './components/detail.vue'
 Vue.config.productionTip = false
+import axios from 'axios'
+Vue.prototype.$axios = axios;
+axios.defaults.baseURL = "http://111.230.232.110:8899";
 //配置提示
 let routes= [
   {
