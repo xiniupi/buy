@@ -166,7 +166,7 @@
                                 </div>
                                 <div class="txt-box">
                                     <a href="/goods/show-98.html">{{item.title}}</a>
-                                    <span>{{item.add_time | formateTime}}</span>
+                                    <span>{{item.add_time | gobalFormatTime('YYYY年MM月DD日')}}</span>
                                 </div>
                             </li>
                         </ul>
@@ -230,11 +230,11 @@ export default {
             goodsList:[]
         }
     },
-    filters:{
-        formateTime(v){
-            return moment(v).format('YYYY-MM-DD');
-        }
-    },
+    // filters:{
+    //     formateTime(v){
+    //         return moment(v).format('YYYY-MM-DD');
+    //     }
+    // },
     created() {
         this.$axios.get("/site/goods/gettopdata/goods")
         .then(res=>{
